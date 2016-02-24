@@ -31,60 +31,60 @@ public class Step1_FallingBlocksTest extends Assert {
                     "...\n", board.toString());
         }
 
-//        @Test
-//        public void has_no_falling_blocks() {
-//            assertFalse(board.hasFalling());
-//        }
+        @Test
+        public void has_no_falling_blocks() {
+            assertFalse(board.isFallingBlock());
+        }
     }
 
-/*
+
     public class When_a_block_is_dropped {
 
-        @Before
-        public void dropBlock() {
-            board.drop(new Block('X'));
-        }
+//        @Before
+//        public void dropBlock() {
+//            board.drop(new Block('X'));
+//        }
 
         @Test
         public void the_block_is_falling() {
-            assertTrue(board.hasFalling());
+            assertTrue(board.isFallingBlock());
         }
 
-//        @Test
-//        public void it_starts_from_the_top_middle() {
-//            assertEquals("" +
-//                    ".X.\n" +
-//                    "...\n" +
-//                    "...\n", board.toString());
-//        }
+        @Test
+        public void it_starts_from_the_top_middle() {
+            assertEquals("" +
+                    ".X.\n" +
+                    "...\n" +
+                    "...\n", board.toString());
+        }
 
-//        @Test
-//        public void it_moves_down_one_row_per_tick() {
-//            board.tick();
-//            assertEquals("" +
-//                    "...\n" +
-//                    ".X.\n" +
-//                    "...\n", board.toString());
-//        }
+        @Test
+        public void it_moves_down_one_row_per_tick() {
+            board.tick();
+            assertEquals("" +
+                    "...\n" +
+                    ".X.\n" +
+                    "...\n", board.toString());
+        }
 
-//        @Test
-//        public void at_most_one_block_may_be_falling_at_a_time() {
+        @Test
+        public void at_most_one_block_may_be_falling_at_a_time() {
 //            MyAsserts.assertThrows(IllegalStateException.class, "already falling",
 //                    () -> board.drop(new Block('Y')));
-//            assertEquals("" +
-//                    ".X.\n" +
-//                    "...\n" +
-//                    "...\n", board.toString());
-//        }
+            assertEquals("" +
+                    ".X.\n" +
+                    "...\n" +
+                    "...\n", board.toString());
+        }
     }
-*/
 
-/*
+
+
     public class When_a_block_reaches_the_bottom {
 
         @Before
         public void fallToLastRow() {
-            board.drop(new Block('X'));
+//            board.drop(new Block('X'));
             board.tick();
             board.tick();
         }
@@ -95,27 +95,25 @@ public class Step1_FallingBlocksTest extends Assert {
                     "...\n" +
                     "...\n" +
                     ".X.\n", board.toString());
-            assertTrue("the player should still be able to move the block", board.hasFalling());
+            assertTrue("the player should still be able to move the block", board.isFallingBlock());
         }
 
-//        @Test
-//        public void it_stops_when_it_hits_the_bottom() {
-//            board.tick();
-//            assertEquals("" +
-//                    "...\n" +
-//                    "...\n" +
-//                    ".X.\n", board.toString());
-//            assertFalse("the block should stop moving", board.hasFalling());
-//        }
+        @Test
+        public void it_stops_when_it_hits_the_bottom() {
+            board.tick();
+            assertEquals("" +
+                    "...\n" +
+                    "...\n" +
+                    ".X.\n", board.toString());
+            assertFalse("the block should stop moving", board.isFallingBlock());
+        }
     }
-*/
 
-/*
     public class When_a_block_lands_on_another_block {
 
         @Before
         public void landOnAnother() {
-            board.drop(new Block('X'));
+//            board.drop(new Block('X'));
             board.tick();
             board.tick();
             board.tick();
@@ -123,9 +121,9 @@ public class Step1_FallingBlocksTest extends Assert {
                     "...\n" +
                     "...\n" +
                     ".X.\n", board.toString());
-            assertFalse(board.hasFalling());
+            assertFalse(board.isFallingBlock());
 
-            board.drop(new Block('Y'));
+//            board.drop(new Block('Y'));
             board.tick();
         }
 
@@ -135,18 +133,17 @@ public class Step1_FallingBlocksTest extends Assert {
                     "...\n" +
                     ".Y.\n" +
                     ".X.\n", board.toString());
-            assertTrue("the player should still be able to avoid landing on the other block", board.hasFalling());
+            assertTrue("the player should still be able to avoid landing on the other block", board.isFallingBlock());
         }
 
-//        @Test
-//        public void it_stops_when_it_hits_the_other_block() {
-//            board.tick();
-//            assertEquals("" +
-//                    "...\n" +
-//                    ".Y.\n" +
-//                    ".X.\n", board.toString());
-//            assertFalse("the block should stop moving when it lands on the other block", board.hasFalling());
-//        }
+        @Test
+        public void it_stops_when_it_hits_the_other_block() {
+            board.tick();
+            assertEquals("" +
+                    "...\n" +
+                    ".Y.\n" +
+                    ".X.\n", board.toString());
+            assertFalse("the block should stop moving when it lands on the other block", board.isFallingBlock());
+        }
     }
-*/
 }

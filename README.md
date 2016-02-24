@@ -51,9 +51,9 @@ Reference implementations for the steps of this tutorial have been [tagged in it
 
     I decided to go for a generic algorithm for rotating any shapes. Another option would have been to hard-code the rotations of each shape. Both have their pros and cons. But even if this decision would prove to be bad when the game evolves furher, good test coverage and decoupled code will make it possible to change it afterwards.
 
-3. **RotatingTetrominoesTest**
+3. **RotatingTetrominesTest**
 
-    [Tetrominoes](http://en.wikipedia.org/wiki/Tetromino) can have 1, 2 or 4 different orientations when they are rotated. Now we can take advantage of the shape rotation code which we wrote just a moment ago.
+    [Tetromines](http://en.wikipedia.org/wiki/Tetromino) can have 1, 2 or 4 different orientations when they are rotated. Now we can take advantage of the shape rotation code which we wrote just a moment ago.
 
     Notice that the first test specifies the `Tetromino` objects to be immutable. Check the Wikipedia article about [immutable objects](http://en.wikipedia.org/wiki/Immutable_object) if that concept is new to you. Defaulting to immutability is a good thing.
 
