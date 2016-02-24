@@ -40,10 +40,10 @@ public class Step1_FallingBlocksTest extends Assert {
 
     public class When_a_block_is_dropped {
 
-//        @Before
-//        public void dropBlock() {
-//            board.drop(new Block('X'));
-//        }
+        @Before
+        public void dropBlock() {
+            board.drop(new Block('X'));
+        }
 
         @Test
         public void the_block_is_falling() {
@@ -69,8 +69,8 @@ public class Step1_FallingBlocksTest extends Assert {
 
         @Test
         public void at_most_one_block_may_be_falling_at_a_time() {
-//            MyAsserts.assertThrows(IllegalStateException.class, "already falling",
-//                    () -> board.drop(new Block('Y')));
+            MyAsserts.assertThrows(IllegalStateException.class, "already falling",
+                    () -> board.drop(new Block('Y')));
             assertEquals("" +
                     ".X.\n" +
                     "...\n" +
@@ -84,7 +84,7 @@ public class Step1_FallingBlocksTest extends Assert {
 
         @Before
         public void fallToLastRow() {
-//            board.drop(new Block('X'));
+            board.drop(new Block('X'));
             board.tick();
             board.tick();
         }
@@ -113,7 +113,7 @@ public class Step1_FallingBlocksTest extends Assert {
 
         @Before
         public void landOnAnother() {
-//            board.drop(new Block('X'));
+            board.drop(new Block('X'));
             board.tick();
             board.tick();
             board.tick();
@@ -123,7 +123,7 @@ public class Step1_FallingBlocksTest extends Assert {
                     ".X.\n", board.toString());
             assertFalse(board.isFallingBlock());
 
-//            board.drop(new Block('Y'));
+            board.drop(new Block('Y'));
             board.tick();
         }
 
